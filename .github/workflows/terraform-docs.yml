@@ -6,9 +6,9 @@ jobs:
     permissions:
       # actions: write
       # checks: write
-      # contents: write
+      contents: write
       # deployments: write
-      issues: write
+      # issues: write
       # packages: write
       # pull-requests: write
       # repository-projects: write
