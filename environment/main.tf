@@ -13,7 +13,9 @@ provider "aws" {
   region = "ap-northeast-1"
 }
 
-resource "aws_subnet" "example" {}
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
 
 # data "aws_caller_identity" "current" {}
 
