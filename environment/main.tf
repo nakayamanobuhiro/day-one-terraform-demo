@@ -13,6 +13,8 @@ provider "aws" {
   region = "ap-northeast-1"
 }
 
+resource "aws_subnet" "example" {}
+
 # data "aws_caller_identity" "current" {}
 
 # resource "aws_s3_bucket" "example1" {}
