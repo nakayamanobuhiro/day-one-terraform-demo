@@ -1,0 +1,21 @@
+version: 3
+automerge: true
+projects:
+  - name: environment
+    dir: environment
+    terraform_version: v1.4.4
+    autoplan:
+      when_modified: ["*.tf"]
+      enabled: true
+    apply_requirements: [mergeable] # approved
+    workflow: default
+workflows:
+  default:
+    plan:
+      steps:
+        - run: terraform fmt -check=true -diff=true -write=false
+        - init
+        - plan
+    apply:
+      steps:
+        - apply
