@@ -15,14 +15,14 @@ provider "aws" {
 
 # Demo02
 
-# data "aws_caller_identity" "current" {}
+data "aws_caller_identity" "current" {}
 
-# resource "aws_s3_bucket" "example1" {}
+resource "aws_s3_bucket" "example1" {}
 
-# variable "bucket_name" {
-#   type = string
-# }
+variable "bucket_name" {
+  type = string
+}
 
-# resource "aws_s3_bucket" "example2" {
-#   bucket = "${var.bucket_name}"
-# }
+resource "aws_s3_bucket" "example2" {
+  bucket = "${var.bucket_name}"
+}
